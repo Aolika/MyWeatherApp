@@ -1,6 +1,7 @@
 package com.example.buran.testproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -115,7 +116,9 @@ public class MainActivity extends AppCompatActivity  implements ForecastAdapter.
     @Override
     public void onForecastListClick(String weatherStrings) {
         Context context = this;
-        Toast.makeText(context,weatherStrings,Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, DetailActivity.class);
+        startActivity(intent);
     }
 
 
